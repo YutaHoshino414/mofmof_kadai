@@ -69,6 +69,8 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.fetch(:property, {})
+      params.require(:property).permit(
+        :name, :price, :address, :age, :remark)
+        # stations_attributes: [:id, :name, :railway, :walk_minute, :Property_id, :_destroy])
     end
 end

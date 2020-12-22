@@ -11,6 +11,37 @@
     </div>
   <% end %>
 
+  <div class="field">
+     <%= form.label :name %>
+     <br>
+     <%= form.text_field :name %>
+   </div>
+
+   <div class="field">
+    <%= form.label :price %>
+    <br>
+    <%= form.number_field :price %>円
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <br>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <br>
+    <%= form.number_field :age %>年
+  </div>
+
+  <div class="field">
+    <%= form.label :remark %>
+    <br>
+    <%= form.text_area :remark %>
+  </div>
+  <hr>
+
   <div class="actions">
     <%= form.submit %>
   </div>
