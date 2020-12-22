@@ -11,38 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-     <%= form.label :name %>
-     <br>
-     <%= form.text_field :name %>
-   </div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
 
-   <div class="field">
-    <%= form.label :price %>
-    <br>
+    <%= form.label :price %><br>
     <%= form.number_field :price %>円
-  </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <br>
+    <%= form.label :address %><br>
     <%= form.text_field :address %>
-  </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <br>
+    <%= form.label :age %><br>
     <%= form.number_field :age %>年
-  </div>
 
-  <div class="field">
-    <%= form.label :remark %>
-    <br>
+    <%= form.label :remark %><br>
     <%= form.text_area :remark %>
-  </div>
   <hr>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.fields_for :stations do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+
+    <%= f.label :railway %><br>
+    <%= f.text_field :railway %>
+
+    <%= f.label :walk_minute %><br>
+    <%= f.text_field :walk_minute %>分
+  <% end %><br>
+
+    <p><%= form.submit "登録する" %></p>
+
 <% end %>
