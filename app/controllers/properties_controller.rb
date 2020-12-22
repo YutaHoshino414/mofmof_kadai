@@ -11,17 +11,20 @@ class PropertiesController < ApplicationController
   # GET /properties/1.json
   def show
     @stations = @property.stations
+    @station_count = 1
   end
 
   # GET /properties/new
   def new
     @property = Property.new
     @property.stations.build
+    @station_count = 1
   end
 
   # GET /properties/1/edit
   def edit
     @property.stations.build
+    @station_count = 1
   end
 
   # POST /properties

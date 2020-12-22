@@ -28,7 +28,7 @@
   <hr>
 
   <%= form.fields_for :stations do |f| %>
-　　<h3>最寄り駅</h3>
+　　<h3>最寄り駅<%= @station_count %></h3>
 
     <%= f.label :railway %>
     <%= f.text_field :railway %><br><br>
@@ -38,8 +38,8 @@
 
     <%= f.label :walk_minute %>
     <%= f.text_field :walk_minute %>分<br><br>
-  <% end %><br>
-
-    <p><%= form.submit "登録する" %></p>
+    <% @station_count +=1 %>
+  <% end %>
+    <p><%= form.submit "登録する" %></p><br>
 
 <% end %>
