@@ -34,7 +34,7 @@ class PropertiesController < ApplicationController
 
     respond_to do |format|
       if @property.save
-        format.html { redirect_to @property, notice: 'Property was successfully created.' }
+        format.html { redirect_to @property, notice: '物件情報が作成されました。' }
         format.json { render :show, status: :created, location: @property }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class PropertiesController < ApplicationController
   def update
     respond_to do |format|
       if @property.update(property_params)
-        format.html { redirect_to @property, notice: 'Property was successfully updated.' }
+        format.html { redirect_to @property, notice: '物件情報が更新されました' }
         format.json { render :show, status: :ok, location: @property }
       else
         format.html { render :edit }
