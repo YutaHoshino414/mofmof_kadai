@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.label :name %>
+    <%= form.text_field :name %><br><br>
 
-    <%= form.label :price %><br>
-    <%= form.number_field :price %>円
+    <%= form.label :price %>
+    <%= form.number_field :price %>円<br><br>
 
-    <%= form.label :address %><br>
-    <%= form.text_field :address %>
+    <%= form.label :address %>
+    <%= form.text_field :address %><br><br>
 
-    <%= form.label :age %><br>
-    <%= form.number_field :age %>年
+    <%= form.label :age %>
+    <%= form.number_field :age %>年<br><br>
 
-    <%= form.label :remark %><br>
-    <%= form.text_area :remark %>
+    <%= form.label :remark %>
+    <%= form.text_area :remark %><br><br>
   <hr>
 
   <%= form.fields_for :stations do |f| %>
+　　<h3>最寄り駅</h3>
 
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :railway %>
+    <%= f.text_field :railway %><br><br>
 
-    <%= f.label :railway %><br>
-    <%= f.text_field :railway %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
 
-    <%= f.label :walk_minute %><br>
-    <%= f.text_field :walk_minute %>分
+    <%= f.label :walk_minute %>
+    <%= f.text_field :walk_minute %>分<br><br>
   <% end %><br>
 
     <p><%= form.submit "登録する" %></p>
